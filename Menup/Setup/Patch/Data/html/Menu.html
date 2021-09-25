@@ -1,0 +1,105 @@
+<div>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    }
+
+    header {
+        width: 100%;
+        background-color: rgba(57, 119, 226, 0.863);
+    }
+
+    #btn-Menu {
+        display: none;
+
+    }
+
+    .menu ul {
+        margin: 0;
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu li a {
+        display: block;
+        padding: 10px 20px;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .menu li a:hover {
+        background-color: rgba(189, 214, 209, 0.829);
+        color: rgb(16, 17, 17);
+        justify-content: center;
+
+    }
+
+    .menu li {
+        border-right: 2px solid #eee;
+        
+    }
+
+    header label {
+        display: none;
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+        border-right: 1px solid #eee;
+    }
+
+    header label:hover {
+        cursor: pointer;
+        background: rgba(11, 14, 19, 0.493);
+    }
+
+    @media (max-width: 768px) {
+        header label {
+            display: block;
+        }
+        .menu {
+            position: absolute;
+            background-color: rgba(11, 14, 19, 0.863);
+            width:60%;
+            margin-left: -70%;
+            transition:all 1s;
+        
+        }
+        .menu:hover {
+            
+            transform: scale(1.2);
+            border-radius: 10px;
+        }
+        .menu ul{
+            flex-direction: column;
+        }
+        .menu li{
+            border-top: 1px solid #ccc;
+        }
+        #btn-Menu:checked ~ .menu{
+            margin: 0;
+        }
+    }
+</style>
+
+<body>
+    <header>
+        <input type="checkbox" id="btn-Menu">
+        <label for="btn-Menu"><img src="/ico.png" alt="menu" srcset=""></label>
+        <nav class="menu">
+            <ul>
+                <li><a href="/Home">Home bray</li>
+                <li><a href="/Mision">Mision</li>
+                <li><a href="/Vision">Vision</li>
+                <li><a href="/Preguntasf">Preguntas Frecuentes</li>
+                <li><a href="/Contactenos">Contactenos</li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</div>
